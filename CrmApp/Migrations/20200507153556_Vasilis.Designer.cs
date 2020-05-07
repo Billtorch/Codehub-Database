@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrmApp.Migrations
 {
     [DbContext(typeof(CrmDbContext))]
-    [Migration("20200505160212_dimitris")]
-    partial class dimitris
+    [Migration("20200507153556_Vasilis")]
+    partial class Vasilis
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -100,11 +100,11 @@ namespace CrmApp.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ProdName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");

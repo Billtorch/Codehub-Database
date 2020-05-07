@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CrmApp.Migrations
 {
-    public partial class dimitris : Migration
+    public partial class Vasilis : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -32,7 +32,7 @@ namespace CrmApp.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true),
+                    ProdName = table.Column<string>(nullable: true),
                     Price = table.Column<decimal>(nullable: false),
                     Quantity = table.Column<int>(nullable: false)
                 },
